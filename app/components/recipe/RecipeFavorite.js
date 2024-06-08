@@ -19,7 +19,6 @@ export default function RecipeFavorite({ recipe }) {
 
   const [favourite, setFavourite] = useState(isFavourite);
 
-  console.log(isFavourite);
   const router = useRouter();
 
   async function handleFavourite() {

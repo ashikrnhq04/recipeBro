@@ -1,8 +1,21 @@
+"use client";
+
 import { createAccount } from "@/app/actions";
+import { useState } from "react";
 
 export default function RegisterForm() {
+  const [error, setError] = useState();
+
+  async function registerUser() {
+    try {
+      const register = await createAccount();
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  }
   return (
-    <form className='login-form' action={createAccount}>
+    <form className='login-form' onSubmit={registerUser}>
       <div>
         <label htmlFor='firstName'>First Name</label>
         <input type='text' name='firstName' id='firstName' />
