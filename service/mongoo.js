@@ -6,8 +6,9 @@ async function connectDB() {
   if (connected) {
     return connected;
   }
+
   try {
-    await mongoose.connect(`${process.env.MONGODB_URI}khanaKhazana`);
+    await mongoose.connect(`${process.env.MONGODB_URI}khanakhazana`);
 
     return (connected = true);
   } catch (error) {

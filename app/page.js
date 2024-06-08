@@ -1,6 +1,6 @@
-import SidebarMenu from "./components/views/home/SidebarMenu";
+import SidebarMenu from "./components/home/SidebarMenu";
 import MenuList from "./components/recipe/MenuList";
-import Hero from "./components/views/home/Hero";
+import Hero from "./components/home/Hero";
 
 export default function Home() {
   return (

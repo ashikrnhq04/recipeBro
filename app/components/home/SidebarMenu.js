@@ -1,6 +1,8 @@
+import { getRecipes } from "@/DB/queries";
 import Link from "next/link";
 
-export default function SidebarMenu() {
+export default async function SidebarMenu() {
+  const recipes = await getRecipes();
   return (
     <div className='col-span-12 md:col-span-3'>
       <h3
