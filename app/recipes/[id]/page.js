@@ -10,6 +10,19 @@ export async function generateMetadata({ params: { id } }) {
   const metadata = {
     title: recipe.name,
     description: recipe.description,
+    openGraph: {
+      title: recipe.name,
+      description: recipe.description,
+      images: [
+        {
+          url: `${recipe.thumbanil}`,
+          secureUrl: `${recipe.thumbnail}`,
+          width: 1200,
+          height: 600,
+          alt: recipe.name,
+        },
+      ],
+    },
   };
   return metadata;
 }

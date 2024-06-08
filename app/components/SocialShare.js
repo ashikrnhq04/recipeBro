@@ -15,14 +15,12 @@ import {
   InstapaperShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-  WhatsappShareButton,
 } from "react-share";
-import { usePathname } from "next/navigation";
 
 export default function SocialShare({ recipe }) {
   const [enableShare, setEnableShare] = useState(false);
 
-  const windowLocation = window.location.href;
+  const windowLocation = window?.location.href;
 
   const hashTag = `#${recipe.name.split(" ").join("-")}`;
 
