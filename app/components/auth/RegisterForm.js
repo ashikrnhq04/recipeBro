@@ -8,7 +8,7 @@ export default function RegisterForm() {
 
   async function registerUser() {
     try {
-      const register = await createAccount();
+      await createAccount();
     } catch (error) {
       console.log(error);
       setError(error.message);
@@ -40,6 +40,7 @@ export default function RegisterForm() {
         className='bg-[#eb4a36] py-3 rounded-md text-white w-full mt-4'>
         Create Account
       </button>
+      {error && <p className='text-sm text-red-600'>{error}</p>}
     </form>
   );
 }
