@@ -26,10 +26,15 @@ export function isValidationError(error) {
   if (errString.startsWith("Error: ValidationError:")) {
     return true;
   }
+  console.log(errString);
   return false;
 }
 
 export function errorKeyValue(error) {
   const errString = error.trim().split(": ");
   return { errKey: errString[0], errVal: errString[1] };
+}
+
+export function sleep(delay) {
+  return new Promise((resolve) => setTimeout(resolve, delay));
 }

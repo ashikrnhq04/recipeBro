@@ -1,10 +1,12 @@
 "use server";
 
+import { sleep } from "@/util/utli";
 import { redirect } from "next/navigation";
 
 const { findUserByEmail, createUser, addInFavorite } = require("@/DB/queries");
 
 async function createAccount(formData) {
+  await sleep(2000);
   return await createUser(formData);
 }
 

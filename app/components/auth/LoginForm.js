@@ -3,9 +3,12 @@ import { makeLogin } from "@/app/actions";
 import { useContext, useState } from "react";
 import { useRouter } from "next/navigation";
 import { authContext } from "@/app/context/auth-context";
+import { FaSpinner } from "react-icons/fa";
 
 export default function LoginForm() {
   const [error, setError] = useState({});
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const { setAuth } = useContext(authContext);
 
@@ -15,6 +18,7 @@ export default function LoginForm() {
     event.preventDefault();
 
     try {
+      setIsLoading(true);
       const formData = new FormData(event.target);
       const foundUser = await makeLogin(formData);
       if (foundUser) {
@@ -55,6 +59,8 @@ export default function LoginForm() {
           common: error.message,
         }));
       }
+    } finally {
+      setIsLoading(false);
     }
   }
   return (
@@ -80,7 +86,11 @@ export default function LoginForm() {
         <button
           type='submit'
           className='bg-[#eb4a36] py-3 rounded-md text-white w-full mt-4'>
-          Login
+          {isLoading ? (
+            <FaSpinner className='animation-spin m-auto' />
+          ) : (
+            "Login"
+          )}
         </button>
         {error?.common && (
           <p className='text-red-600 my-4 text-center'>{error.common}</p>

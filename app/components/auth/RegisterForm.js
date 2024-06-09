@@ -1,13 +1,14 @@
 "use client";
 
+import { FaSpinner } from "react-icons/fa";
+
 import { createAccount } from "@/app/actions";
-import {
-  errorKeyValue,
-  isValidationError,
-  serverErrorToReadableError,
-} from "@/util/utli";
+
+import { isValidationError, serverErrorToReadableError } from "@/util/utli";
+
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+
+import { useTransition, useState } from "react";
 
 export default function RegisterForm() {
   const [formData, setFormData] = useState({});
@@ -15,6 +16,8 @@ export default function RegisterForm() {
   const router = useRouter();
 
   const [error, setError] = useState({});
+
+  const [isLoading, setIsLoading] = useState(false);
 
   function handleOnChange(event) {
     setError((prevError) => ({ ...prevError, [event.target.name]: "" }));
@@ -27,6 +30,7 @@ export default function RegisterForm() {
   async function registerUser(event) {
     event.preventDefault();
     try {
+      setIsLoading(true);
       const register = await createAccount(formData);
       if (register) {
         router.push("/login");
@@ -44,6 +48,8 @@ export default function RegisterForm() {
       } else {
         error.common = err.message;
       }
+    } finally {
+      setIsLoading(false);
     }
   }
   return (
@@ -104,7 +110,11 @@ export default function RegisterForm() {
       <button
         type='submit'
         className='bg-[#eb4a36] py-3 rounded-md text-white w-full mt-4'>
-        Create Account
+        {isLoading ? (
+          <FaSpinner className='animate-spin m-auto' />
+        ) : (
+          "Create Account"
+        )}
       </button>
       {error.common && <p className='text-sm text-red-600'>{error.common}</p>}
     </form>
