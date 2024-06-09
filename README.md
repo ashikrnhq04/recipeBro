@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recipe Website
+
+This is a recipe website bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+DataBase backed by MongoDB hosted on Mongo Atlas.
+
+# Project features
+
+- User registration with schema validation.
+- User login (simple email, password authentication).
+- Data fetched from DB server.
+- Recipe favourite and share option.
+- Implemented middleware to rewrite URL and redirect user to home page if they hit "Recipe" from the navbar.
+
+### Image Credit : Unsplash
+
+### Logo Credit : PNGTree
 
 ## Getting Started
 
