@@ -12,9 +12,7 @@ DataBase backed by MongoDB hosted on Mongo Atlas.
 - Recipe favourite and share option.
 - Implemented middleware to rewrite URL and redirect user to home page if they hit "Recipe" from the navbar.
 
-### Image Credit : Unsplash
-
-### Logo Credit : PNGTree
+To run this project, please follow this below "Getting Started" guideline.
 
 ## Getting Started
 
@@ -50,3 +48,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+#### Image Credit - Unsplash, Logo Credit - PNGTree
