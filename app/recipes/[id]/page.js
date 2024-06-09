@@ -15,8 +15,8 @@ export async function generateMetadata({ params: { id } }) {
       description: recipe.description,
       images: [
         {
-          url: `${recipe.thumbanil}`,
-          secureUrl: `${recipe.thumbnail}`,
+          url: `${recipe.image}`,
+          secureUrl: `${recipe.image}`,
           width: 1200,
           height: 600,
           alt: recipe.name,
