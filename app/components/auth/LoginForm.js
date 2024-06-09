@@ -69,7 +69,7 @@ export default function LoginForm() {
       <form className='login-form' onSubmit={handleLogin}>
         <div>
           <label htmlFor='email'>Email Address</label>
-          <input type='email' name='email' id='email' />
+          <input type='email' autoComplete='username' name='email' id='email' />
           {error?.email && (
             <p className='text-red-600 text-sm'>{error.email}</p>
           )}
@@ -77,7 +77,12 @@ export default function LoginForm() {
 
         <div>
           <label htmlFor='password'>Password</label>
-          <input type='password' name='password' id='password' />
+          <input
+            type='password'
+            name='password'
+            autoComplete='current-password'
+            id='password'
+          />
           {error?.password && (
             <p className='text-red-600 text-sm'>{error.password}</p>
           )}
