@@ -86,11 +86,7 @@ export default function LoginForm() {
         <button
           type='submit'
           className='bg-[#eb4a36] py-3 rounded-md text-white w-full mt-4'>
-          {isLoading ? (
-            <FaSpinner className='animation-spin m-auto' />
-          ) : (
-            "Login"
-          )}
+          {isLoading ? <FaSpinner className='animate-spin m-auto' /> : "Login"}
         </button>
         {error?.common && (
           <p className='text-red-600 my-4 text-center'>{error.common}</p>
