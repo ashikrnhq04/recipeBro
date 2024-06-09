@@ -70,10 +70,14 @@ async function addInFavorite(id, authId) {
 }
 
 async function createUser(formData) {
-  console.log(formData);
-  await userModel
-    .create(formData)
-    .catch((error) => new Error("Error in submitting the form"));
+  try {
+    const userCreation = await userModel.create(formData);
+    if (userCreation?._id) {
+      return "Success";
+    }
+  } catch (error) {
+    throw new Error(error);
+  }
 }
 
 async function findUserByEmail(formData) {

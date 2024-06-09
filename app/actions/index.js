@@ -5,12 +5,7 @@ import { redirect } from "next/navigation";
 const { findUserByEmail, createUser, addInFavorite } = require("@/DB/queries");
 
 async function createAccount(formData) {
-  const FormData = formData;
-
-  const user = Object.fromEntries(FormData);
-
-  await createUser(user);
-  redirect("/login");
+  return await createUser(formData);
 }
 
 async function makeLogin(formData) {

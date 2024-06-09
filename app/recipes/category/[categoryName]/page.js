@@ -2,6 +2,16 @@ import MenuCard from "@/app/components/recipe/MenuCard";
 import { getRecipesByCategory } from "@/DB/queries";
 import { capitalizeWords } from "@/util/utli";
 
+export function generateMetadata({ params: { categoryName } }) {
+  const metadata = {
+    title: `${capitalizeWords(
+      decodeURIComponent(categoryName)
+    )} | Nature Recipe`,
+    description: "Nature Recipe category page",
+  };
+  return metadata;
+}
+
 export default async function Home({ params: { categoryName } }) {
   const recipeCategory = decodeURIComponent(categoryName);
 

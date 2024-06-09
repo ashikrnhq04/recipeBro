@@ -2,48 +2,48 @@ import mongoose, { Schema } from "mongoose";
 
 const schema = new Schema({
   name: {
-    require: true,
+    required: true,
     type: String,
   },
   description: {
-    require: true,
+    required: true,
     type: String,
   },
   author: {
-    require: true,
+    required: true,
     type: String,
   },
   activeTime: {
-    require: true,
+    required: true,
     type: String,
   },
   totalTime: {
-    require: true,
+    required: true,
     type: String,
   },
   thumbnail: {
-    require: true,
+    required: true,
     type: String,
   },
   image: {
-    require: true,
+    required: true,
     type: String,
   },
   category: {
-    require: true,
+    required: true,
     type: String,
   },
   serves: {
-    require: true,
+    required: true,
     type: Number,
   },
   rating: {
-    require: true,
+    required: true,
     type: Number,
   },
   steps: {
-    require: true,
-    type: Array,
+    required: true,
+    type: [String],
   },
 });
 

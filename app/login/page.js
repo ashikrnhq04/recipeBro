@@ -2,8 +2,8 @@ import Link from "next/link";
 import LoginForm from "../components/auth/LoginForm";
 
 export const metadata = {
-  title: "Login | LWS",
-  description: "LWS KhanaKhazana Login",
+  title: "Login | Nature Recipe",
+  description: "Nature Recipe Login Page",
 };
 
 export default function LoginPage() {

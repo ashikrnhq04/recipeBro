@@ -10,10 +10,9 @@ export default function Navbar() {
         <Link href='/'>
           <Image
             src='/assets/images/logo.png'
-            alt=''
-            className='object-cover h-[40px]'
-            width={120}
-            height={80}
+            alt='Nature Recipe'
+            width={80}
+            height={100}
           />
         </Link>
 
