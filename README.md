@@ -12,7 +12,10 @@ DataBase backed by MongoDB hosted on Mongo Atlas.
 - Recipe favourite and share option.
 - Implemented middleware to rewrite URL and redirect user to home page if they hit "Recipe" from the navbar.
 
-Live Demo: https://naturerecipe-nu.vercel.app/
+## Live Demo:
+
+(https://naturerecipe-nu.vercel.app/)
+
 <sub><sup>This project hosted on a free host along with it's Database. Some functionalities may not work due to this. Please try with reload.</sup></sub>
 
 To run the project, please follow this below "Getting Started" guideline.
