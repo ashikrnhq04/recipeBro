@@ -14,7 +14,7 @@ DataBase backed by MongoDB hosted on Mongo Atlas.
 
 ## Live Demo:
 
-(https://naturerecipe-nu.vercel.app/)
+[Nature Recipe](https://naturerecipe-nu.vercel.app/)
 
 <sub><sup>This project hosted on a free host along with it's Database. Some functionalities may not work due to this. Please try with reload.</sup></sub>
 
